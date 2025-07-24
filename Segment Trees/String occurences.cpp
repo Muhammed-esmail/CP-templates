@@ -104,10 +104,10 @@ struct segment_tree {
     int query_right(char c, int k) {    // k th occurence from right
         return query_right(1, 1, size,k,c);
     }
-    int sum_left(int l, char c) {       // number of occurences from 1 to i
-        return sum_left(1,1,size,l,c);
+    int sum_left(int i, char c) {       // number of occurences from 1 to i
+        return sum_left(1,1,size,i,c);
     }
-    int sum_right(int l, char c) {     // number of occurences from i to n
-        return sum_right(1,1,size,l,c);
+    int sum_right(int i, char c) {     // number of occurences from i to n
+        return sum_right(1,1,size,i,c);
     }
 };
