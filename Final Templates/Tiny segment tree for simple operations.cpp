@@ -19,8 +19,8 @@ void modify(int p, int value) {
         t[p>>1] = merge(t[p], t[p^1]);
 }
 
-int query(int l, int r) {
-    l--; r--;
+int query(int l, int r) { // <-------- input is 1-based and inclusive [l,r]
+    l--; r--;   // <-- remove these for 0-based
     int res = Zero;
     l += n, r += n;
     while(l <= r) {
@@ -34,7 +34,7 @@ int query(int l, int r) {
 void solve() {
     int q; cin >> n >> q;
     for(int i= 0; i < n; i++){
-        cin >> t[i+n];
+        cin >> t[i+n];    // <--- take input like this
     }
     build();
     for(int i = 0; i < q; i++){
