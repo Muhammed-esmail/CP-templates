@@ -12,7 +12,8 @@ void apply(int p, int len, int value) {
     st[p] = value;
     // lazy[p] ^= value;
 }
-/////////////
+// Leave this
+//------------------------------------------------------------------// 
 void prop(int p, int l, int r) {
     if(lazy[p] == off)return;
     if(l == r) return;
@@ -44,7 +45,7 @@ int query(int p, int l, int r, int lx, int rx) {
     b = query(R(p), m + 1, r, lx ,rx);
     return op(a, b);
 }
-
+//------------------------------------------------------------------// 
 
 void solve() {
     int n,q; cin >> n >> q;
