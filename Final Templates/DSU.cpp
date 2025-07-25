@@ -1,6 +1,6 @@
 struct DSU {
     vector<int> parent, sz;
-
+    // can add another vector for merging sets' values (max/min element in a set)
     DSU(int n) {
         parent.resize(n + 1);
         sz.resize(n + 1, 1);
