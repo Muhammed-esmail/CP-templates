@@ -1,9 +1,9 @@
 constexpr int N = 5e5 + 10;
 int n;
 int t[2 * N];
-int Zero = 0;
 
-int merge(int a, int b) {
+int Zero = 0;
+int merge(int a, int b) { // <--- change merge and zero to change the query ( sum, max, min, xor, gcd, product,...)
     return a + b;
 }
 
