@@ -2,7 +2,15 @@ int n;
 vector<vector<int>> adj;
 vector<vector<int>> parent; // parent[i][k] = the 2^k th ancestor of i
 vector<int> depth;
-int LOG = 22;
+
+const int LOG = 22;
+// call after taking input n 
+//---------------------------------------------------//
+void init() {
+    adj.clear(); parent.clear(); depth.clear();
+    adj.resize(n+1); parent.resize(n+1); depth.resize(n+1);
+}
+//---------------------------------------------------//
 void pre(int r, int p){
     parent[r][0] = p; 
     for(int i = 1; i <= LOG; i++) {
